@@ -1,6 +1,10 @@
 @extends('template')
 
 @section('content')
+        <a href="{{ route('contact.form') }}" class="btn btn-primary">
+            Add Contact
+        </a>
+
     <table class="table table-hover">
         <thead>
         <tr>
