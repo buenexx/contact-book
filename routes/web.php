@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\ContactCreateController;
+use App\Http\Controllers\ContactShowController;
+use App\Http\Controllers\ContactUpdateController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,4 +20,8 @@ Route::get('/', function () {
     return view('welcome');
 })->name('contacts.index');
 
-Route::post('/create', ContactCreateController::class)->name('contacts.store');
+Route::prefix('contacts')->group(function () {
+    Route::post('/create', ContactCreateController::class)->name('contact.store');
+    Route::get('/{contact}', ContactShowController::class)->name('contact.show');
+    Route::put('/{contact}/update', ContactUpdateController::class)->name('contact.update');
+});
