@@ -1,9 +1,7 @@
 <?php
 
-namespace Tests\Feature\Contat;
+namespace Tests\Feature\Contact;
 
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithFaker;
 use Symfony\Component\HttpFoundation\Response;
 use Tests\TestCase;
 
