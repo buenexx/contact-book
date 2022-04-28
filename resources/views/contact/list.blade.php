@@ -1,9 +1,15 @@
 @extends('template')
 
 @section('content')
-        <a href="{{ route('contact.form') }}" class="btn btn-primary">
-            Add Contact
-        </a>
+    @if(session()->has('message'))
+        <div class="alert alert-success">
+            {{ session()->get('message') }}
+        </div>
+    @endif
+
+    <a href="{{ route('contact.form') }}" class="btn btn-primary">
+        Add Contact
+    </a>
 
     <table class="table table-hover">
         <thead>

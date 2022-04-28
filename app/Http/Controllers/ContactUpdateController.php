@@ -25,6 +25,6 @@ class ContactUpdateController extends Controller
 
         $contact->save();
 
-        return redirect(route('contact.show', $contact));
+        return redirect(route('contact.show', $contact))->with('message', 'Contact updated!');
     }
 }

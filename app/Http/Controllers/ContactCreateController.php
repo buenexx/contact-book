@@ -22,6 +22,6 @@ class ContactCreateController extends Controller
             'phone' => request('phone'),
         ]);
 
-        return redirect(route('contacts.index'));
+        return redirect(route('contacts.index'))->with('message', 'Contact created successfully.');
     }
 }
